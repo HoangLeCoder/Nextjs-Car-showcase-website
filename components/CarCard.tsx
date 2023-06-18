@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { calculateCarRent } from "@/utils";
 import { CarProps } from "@/types";
 import CustomButton from "./CustomButton";
-import { calculateCarRent } from "@/utils";
 import CarDetails from "./CarDetails";
 
 interface CarCardProps {
@@ -14,8 +14,8 @@ interface CarCardProps {
 const CarCard = ({ car }: CarCardProps) => {
     const { city_mpg, year, make, model, transmission, drive } = car;
     const [isOpen, setIsOpen] = useState(false);
-    
     const carRent = calculateCarRent(city_mpg, year);
+    
     return (
         <div className="car-card group">
             <div className="car-card__content">
@@ -81,10 +81,11 @@ const CarCard = ({ car }: CarCardProps) => {
                       rightIcon="/right-arrow.svg"
                       handleClick={() => setIsOpen(true)}
                     />
+                    <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car}/>
                 </div>
             </div>
 
-            <CarDetails/>
+            
         </div>
     );
 };
