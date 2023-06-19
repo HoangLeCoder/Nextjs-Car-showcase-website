@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import SearchManufacturer from "./SearchManufacturer";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
-  <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
+  <button type='submit' className={` z-10 ${otherClasses}`}>
     <Image
       src={"/magnifying-glass.svg"}
       alt={"magnifying glass"}
@@ -19,7 +19,7 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
 );
 
 const SearchBar = () => {
-  const [manufacturer, setManuFacturer] = useState("");
+  const [manufacturer, setManufacturer] = useState("");
   const [model, setModel] = useState("");
 
   const router = useRouter();
@@ -35,24 +35,19 @@ const SearchBar = () => {
   };
 
   const updateSearchParams = (model: string, manufacturer: string) => {
-    // Create a new URLSearchParams object using the current URL search parameters
     const searchParams = new URLSearchParams(window.location.search);
 
-    // Update or delete the 'model' search parameter based on the 'model' value
     if (model) {
       searchParams.set("model", model);
     } else {
       searchParams.delete("model");
     }
 
-    // Update or delete the 'manufacturer' search parameter based on the 'manufacturer' value
     if (manufacturer) {
       searchParams.set("manufacturer", manufacturer);
     } else {
        searchParams.delete("manufacturer");
     }
-
-    // Generate the new pathname with the updated search parameters
     const newPathname = `${window.location.pathname}?${searchParams.toString()}`;
 
     router.push(newPathname);
@@ -63,7 +58,7 @@ const SearchBar = () => {
       <div className='searchbar__item'>
         <SearchManufacturer
           manufacturer={manufacturer}
-          setManufacturer={setManuFacturer}
+          setManufacturer={setManufacturer}
         />
         <SearchButton otherClasses='sm:hidden' />
       </div>
