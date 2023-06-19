@@ -36,4 +36,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## UI using 
 In this project I gonna use Headless UI to create the UI of the items card
+
 By: npm install @headlessui/react
+
+You can view the website at https://harrycarhub.netlify.app
+
