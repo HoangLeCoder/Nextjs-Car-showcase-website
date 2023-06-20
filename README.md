@@ -1,43 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Reference: https://www.youtube.com/watch?v=pUNSHPyVryU
 
-## Getting Started
+## Learning knowledge 
+This is all the things I have learned throughout this project:
+- Use Next.js 13 App Router and Server side Rendering
+- Implement Advanced Search Functionality
+- Create Filtering Capabilities
+- Optimize Metadata and SEO
+- Create custom filter, combo box, and modal elements
+- Maintain a well-organized file and folder structure.
+- Embrace the principles of writing clean code.
 
-First, run the development server:
+## API using
+💻RapidAPI: https://rapidapi.com/hub/?utm_source=...
+💻RapidAPI Cars API: - https://rapidapi.com/apininjas/api/ca...
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Programming language
+- React 
+- Next JS 13
+- Typescript
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-
-## UI using 
-In this project I gonna use Headless UI to create the UI of the items card
-
-By: npm install @headlessui/react
+## CSS framework
+- Headless UI 
+- Tailwind CSS
 
 You can view the website at https://harrycarhub.netlify.app
 
