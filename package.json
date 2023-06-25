@@ -2,7 +2,7 @@
     "name": "car_showcase",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://HoangLeCoder.github.io/Nextjs-Car-showcase-website/",
+    "homepage": "https://https://hoanglecoder.github.io/Nextjs-Car-showcase-website/",
     "scripts": {
         "dev": "next dev",
         "build": "next build",
