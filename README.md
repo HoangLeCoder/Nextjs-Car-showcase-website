@@ -23,7 +23,11 @@ This is all the things I have learned throughout this project:
 - Headless UI 
 - Tailwind CSS
 
-You can view the website at https://harrycarhub.netlify.app
+## Run command
+Step 1: Pull code to local
+Step 2: Open Terminal and move into the project using "cd" command
+Step 3: Run "npm i" to install dependencies according to package.json
+Step 3: Run "npm run dev" and see the preview at http://localhost:3000
 
 
 

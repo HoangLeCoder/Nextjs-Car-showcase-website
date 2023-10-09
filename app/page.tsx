@@ -41,13 +41,15 @@ export default function Home() {
     };
 
     useEffect(() => {
-        console.log(fuel, year, limit, manufacturer, model)
+        console.log(fuel, year, limit, manufacturer, model);
         getCars();
     }, [fuel, year, limit, manufacturer, model]);
 
     const isDataEmpty =
         !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
+
+        
     return (
         <main className="overflow-hidden">
             <Hero />
@@ -58,21 +60,17 @@ export default function Home() {
                     <p>Explore the cars you might like</p>
                 </div>
                 <div className="home__filters">
-                    <SearchBar
-                        setManufacturer={setManufacturer}
-                        setModel={setModel}
-                    />
+                    <SearchBar />
                     <div className="home__filter-container">
-                        <CustomFilter title="fuel" options={fuels} setFilter={setFuel}/>
+                        <CustomFilter title="fuel" options={fuels} />
                         <CustomFilter
                             title="year"
                             options={yearsOfProduction}
-                            setFilter={setYear}
                         />
                     </div>
                 </div>
 
-                {allCars.length > 0 ? (
+                {!isDataEmpty ? (
                     <section>
                         <div className="home__cars-wrapper">
                             {allCars?.map((car) => (
@@ -80,21 +78,20 @@ export default function Home() {
                             ))}
                         </div>
 
-                                {loading && (
-                                    <div className="mt-16 w-full flex-center">
-                                        <Image
-                                        src="/loader.svg"
-                                        alt="loader"
-                                        width={50}
-                                        height={50}
-                                        className="object-contain"
-                                        />
-                                    </div>
-                                )}
+                        {loading && (
+                            <div className="mt-16 w-full flex-center">
+                                <Image
+                                    src="/loader.svg"
+                                    alt="loader"
+                                    width={50}
+                                    height={50}
+                                    className="object-contain"
+                                />
+                            </div>
+                        )}
                         <ShowMore
                             pageNumber={limit / 10}
                             isNext={limit > allCars.length}
-                            setLimit={setLimit}
                         />
                     </section>
                 ) : (
@@ -102,7 +99,7 @@ export default function Home() {
                         <h2 className="text-black text-xl font-bold">
                             Oops, no results
                         </h2>
-                        <p>{allCars?.message}</p>
+                        {/* <p>{allCars?.message}</p> */}
                     </div>
                 )}
             </div>
