@@ -1,5 +1,9 @@
 Reference: https://www.youtube.com/watch?v=pUNSHPyVryU
 
+You can check the preview at the below link that I've already deploy with Netlify
+Netlify deploy: https://harrycarhub.netlify.app
+
+
 ## Learning knowledge 
 This is all the things I have learned throughout this project:
 - Use Next.js 13 App Router and Server side Rendering
